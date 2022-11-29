@@ -7,7 +7,9 @@ function IMC($peso, $altura){
 }
 # Função que calcula a meta de peso (18.69 - 24.99) #
 function PesoIdeal($altura, $IMC){
-    if ($IMC < 19)
+if ($IMC < 19 or $IMC > 25){
+    $IMC = 19;
+    }
     while ($IMC >= 19 and $IMC <= 25){
         $pesoideal = $IMC * ($altura ** 2);
         $pesoideal = round($pesoideal, 2);
@@ -17,4 +19,12 @@ function PesoIdeal($altura, $IMC){
         $IMC = $IMC + 1;
     }
 }
+echo PesoIdeal(1.8 , 15.0)."<br>";
+echo PesoIdeal(1.2 , 23.0)."<br>";
+echo PesoIdeal(1.1 , 27.0)."<br>";
+echo PesoIdeal(1.3 , 21.0)."<br>";
+echo PesoIdeal(1.4 , 22.0)."<br>";
+echo PesoIdeal(1.9 , 28.0)."<br>";
+echo PesoIdeal(1.1 , 27.0)."<br>";
+echo PesoIdeal(1.4 , 29.0)."<br>";
 ?>
