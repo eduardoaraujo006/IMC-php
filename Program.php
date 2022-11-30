@@ -12,15 +12,10 @@
 
 <?php
 include ("IMC_Func.php");
-
-if ($_REQUEST["altura"] != 0){
-    if (isset($_POST["bnt"])){
-        echo ("Seu IMC é: ".IMC($_REQUEST["peso"], $_REQUEST["altura"]));
-        echo nl2br("\n");
-        echo nl2br("\n");
-        echo PesoIdeal($_POST["altura"], IMC($_REQUEST["peso"], $_REQUEST["altura"]));
+if (isset($_POST["bnt"])){
+    echo ("Seu IMC é: ".IMC($_REQUEST["peso"], $_REQUEST["altura"]));
+    echo nl2br("\n");
+    echo nl2br("\n");
+    echo PesoIdeal($_POST["altura"], IMC($_REQUEST["peso"], $_REQUEST["altura"]));
     }
-}else{
-    echo "Erro Fatal !";
-}
 ?>
