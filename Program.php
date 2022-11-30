@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="br">
 <head>
-    <form method="post">
+    <form action="" method="post">
         Digite seu peso: <input type="int" name="peso"/>
         Digite sua altura: <input type="int" name="altura"/><br><br>
         <button type="submit" name="bnt">Enviar</button><br><br>
@@ -12,13 +12,15 @@
 
 <?php
 include ("IMC_Func.php");
-$peso = $_REQUEST["peso"];
-$altura = $_REQUEST["altura"];
 
-if (isset($_REQUEST["bnt"])){
-    echo ("Seu IMC é: ".IMC($peso, $altura));
-    echo nl2br("\n");
-    echo nl2br("\n");
-    echo PesoIdeal($altura, IMC($peso, $altura));
+if ($_REQUEST["altura"] != 0){
+    if (isset($_POST["bnt"])){
+        echo ("Seu IMC é: ".IMC($_REQUEST["peso"], $_REQUEST["altura"]));
+        echo nl2br("\n");
+        echo nl2br("\n");
+        echo PesoIdeal($_POST["altura"], IMC($_REQUEST["peso"], $_REQUEST["altura"]));
+    }
+}else{
+    echo "Erro Fatal !";
 }
 ?>

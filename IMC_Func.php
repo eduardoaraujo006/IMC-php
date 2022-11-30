@@ -19,12 +19,4 @@ if ($IMC < 19 or $IMC > 25){
         $IMC = $IMC + 1;
     }
 }
-echo PesoIdeal(1.8 , 15.0)."<br>";
-echo PesoIdeal(1.2 , 23.0)."<br>";
-echo PesoIdeal(1.1 , 27.0)."<br>";
-echo PesoIdeal(1.3 , 21.0)."<br>";
-echo PesoIdeal(1.4 , 22.0)."<br>";
-echo PesoIdeal(1.9 , 28.0)."<br>";
-echo PesoIdeal(1.1 , 27.0)."<br>";
-echo PesoIdeal(1.4 , 29.0)."<br>";
 ?>
