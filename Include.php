@@ -10,7 +10,8 @@ function PesoIdeal($altura, $IMC){
     $IMC = 19;
 while ($IMC >= 19 and $IMC <= 25){
     $pesoideal = $IMC * ($altura ** 2);
-    $pesoideal = round($pesoideal, 2);}
+    $pesoideal = round($pesoideal, 2);
+    $IMC = $IMC + 6;}
     return $pesoideal;
 }
 ?>
