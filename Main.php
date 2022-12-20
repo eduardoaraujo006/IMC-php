@@ -11,21 +11,17 @@
 </html>
 
 <?php
-include ("Funções/Include.php");
-include ("Funções/FunçãoConexão.php");
-
-$peso = $_REQUEST['peso'];
-$altura = $_REQUEST['altura'];
+include ("Include.php");
 
 if (isset($_POST["bnt"])){
     
     # Execução MYSQL #
 
-    $stmt = $conn->prepare("SELECT 1 FROM registros WHERE altura = '".$altura."' and 'peso' = '".$peso."' limit 1");
+    $stmt = $conn->prepare("SELECT 1 FROM registros WHERE altura = '".$altura = $_REQUEST['altura']."' and 'peso' = '".$peso = $_REQUEST['peso']."' limit 1");
     $stmt->execute();
 
     if(!$stmt->fetch()){
-    $stmt = $conn->prepare ("INSERT INTO registros (altura, peso) VALUES ('".$altura."','".$peso."')");
+    $stmt = $conn->prepare ("INSERT INTO registros (altura, peso) VALUES ('".$altura = $_REQUEST['altura']."','".$peso = $_REQUEST['peso']."')");
     $stmt->execute();
         }
         F_ALERTA("Salvo");
